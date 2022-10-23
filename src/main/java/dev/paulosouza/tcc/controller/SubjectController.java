@@ -22,7 +22,6 @@ public class SubjectController {
     public ResponseEntity<List<Subject>> getSubjects(@RequestParam(name = "period", defaultValue = "1") short period) {
         return ResponseEntity.ok(this.service.findAll(period));
     }
-
     @PostMapping
     public ResponseEntity<List<SubjectResponse>> createSubjects(@RequestBody List<SubjectRequest> subjects) {
         List<SubjectResponse> response = this.service.create(subjects);

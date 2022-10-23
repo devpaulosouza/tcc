@@ -10,8 +10,6 @@ public class GridRequest {
 
     private int period = 0;
 
-    private int maxPerPeriod = 7;
-
     private List<String> pendingSubjectIds = new ArrayList<>();
 
     private List<String> doneSubjectIds = new ArrayList<>();

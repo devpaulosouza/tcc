@@ -6,7 +6,6 @@ import dev.paulosouza.tcc.dto.response.ClassroomTimeResponse;
 import dev.paulosouza.tcc.model.Classroom;
 import dev.paulosouza.tcc.model.ClassroomTime;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
 import java.util.List;
