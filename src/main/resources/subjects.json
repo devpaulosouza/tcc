@@ -1,0 +1,387 @@
+[
+    {
+        "id": "AEDs1",
+        "name": "Algoritmos e Estruturas de Dados I",
+        "period": 1,
+        "preRequisiteIds": [],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "C1",
+        "name": "Cálculo I",
+        "period": 1,
+        "preRequisiteIds": [],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "IC",
+        "name": "Introdução à Computação (extensionista)",
+        "period": 1,
+        "preRequisiteIds": [],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "LIP",
+        "name": "Lab. de Iniciação à Programação",
+        "period": 1,
+        "preRequisiteIds": [],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "O1",
+        "name": "Optativa I",
+        "period": 1,
+        "preRequisiteIds": [],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "TI1",
+        "name": "Trab. Interdisciplinar: Aplicações Web",
+        "period": 1,
+        "preRequisiteIds": [],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "AEDs2",
+        "name": "Algoritmos e Estruturas de Dados II",
+        "period": 2,
+        "preRequisiteIds": ["AEDs1"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "AC1",
+        "name": "Arquitetura de Computadores I",
+        "period": 2,
+        "preRequisiteIds": ["AEDs1"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "BD",
+        "name": "Bancos de Dados",
+        "period": 2,
+        "preRequisiteIds": [],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "CR:FR",
+        "name": "Cultura Religiosa: Fenômeno Religioso",
+        "period": 2,
+        "preRequisiteIds": [],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "ISI",
+        "name": "Introdução aos Sistemas Inteligentes",
+        "period": 2,
+        "preRequisiteIds": [],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "TI2",
+        "name": "Trab. Interdisciplinar II: BD e S. Inteligentes",
+        "period": 2,
+        "preRequisiteIds": [],
+        "coRequisiteIds": ["AEDs2", "BD"]
+    },
+    {
+        "id": "AEDs3",
+        "name": "Algoritmos e Estruturas de Dados III",
+        "period": 3,
+        "preRequisiteIds": ["AEDs2"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "AC2",
+        "name": "Arquitetura de Computadores II",
+        "period": 3,
+        "preRequisiteIds": ["AC1"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "C2",
+        "name": "Cálculo II",
+        "period": 3,
+        "preRequisiteIds": ["C1"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "ES1",
+        "name": "Engenharia de Software I",
+        "period": 3,
+        "preRequisiteIds": ["TI2"],
+        "coRequisiteIds": ["AEDs2"]
+    },
+    {
+        "id": "LPS",
+        "name": "Linguagens de Programação",
+        "period": 3,
+        "preRequisiteIds": ["AEDs2"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "TI3",
+        "name": "Trab. Interdisciplinar III: Pesquisa Aplicada",
+        "period": 3,
+        "preRequisiteIds": ["TI2"],
+        "coRequisiteIds": ["AEDs2"]
+    },
+    {
+        "id": "EP",
+        "name": "Estatística e Probabilidade",
+        "period": 4,
+        "preRequisiteIds": ["C1"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "IA",
+        "name": "Inteligência Artificial",
+        "period": 4,
+        "preRequisiteIds": [],
+        "coRequisiteIds": ["EP", "TGC"]
+    },
+    {
+        "id": "LDDM",
+        "name": "Lab. de Desenvol. para Dispositivos Móveis",
+        "period": 4,
+        "preRequisiteIds": ["AEDs2"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "MAD",
+        "name": "Modelagem e Avaliação de Desempenho",
+        "period": 4,
+        "preRequisiteIds": ["EP", "TGC"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "O2",
+        "name": "Optativa II",
+        "period": 4,
+        "preRequisiteIds": [],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "TGC",
+        "name": "Teoria dos Grafos e Computabilidade",
+        "period": 4,
+        "preRequisiteIds": [],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "TI4",
+        "name": "Trab. Interdisciplinar IV: Aplicações Móveis",
+        "period": 4,
+        "preRequisiteIds": [],
+        "coRequisiteIds": ["IA", "LDDM"]
+    },
+    {
+        "id": "AC3",
+        "name": "Arquitetura de Computadores III ",
+        "period": 5,
+        "preRequisiteIds": ["AC2"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "ES2",
+        "name": "Engenharia de Software II",
+        "period": 5,
+        "preRequisiteIds": ["ES1"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "O3",
+        "name": "Optativa III",
+        "period": 5,
+        "preRequisiteIds": [],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "PAA",
+        "name": "Projeto e Análise de Algoritmos",
+        "period": 5,
+        "preRequisiteIds": ["TGC", "EP"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "R1",
+        "name": "Redes de Computadores I",
+        "period": 5,
+        "preRequisiteIds": ["TGC"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "SO",
+        "name": "Sistemas Operacionais",
+        "period": 5,
+        "preRequisiteIds": ["AEDs2", "AC2"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "TI5",
+        "name": "Trab. Interdisciplinar V: Sist. Computacionais",
+        "period": 5,
+        "preRequisiteIds": [],
+        "coRequisiteIds": ["R1", "AC3", "SO"]
+    },
+    {
+        "id": "CD",
+        "name": "Computação Distribuída",
+        "period": 6,
+        "preRequisiteIds": ["R1"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "CP",
+        "name": "Computação Paralela",
+        "period": 6,
+        "preRequisiteIds": ["AEDs3", "AC3"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "F:RM",
+        "name": "Filosofia: Razão e Modernidade",
+        "period": 6,
+        "preRequisiteIds": [],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "FTC",
+        "name": "Fundamentos Teóricos da Computação",
+        "period": 6,
+        "preRequisiteIds": ["TGC"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "GAAL",
+        "name": "Geometria Analítica e Álgebra Linear",
+        "period": 6,
+        "preRequisiteIds": [],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "PAI",
+        "name": "Processamento e Análise de Imagens",
+        "period": 6,
+        "preRequisiteIds": ["PAA"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "TI6",
+        "name": "Trab. Interdisciplinar VI: Sist. Paral. e Distrib.",
+        "period": 6,
+        "preRequisiteIds": [],
+        "coRequisiteIds": ["CP", "CD"]
+    },
+    {
+        "id": "COMP",
+        "name": "Compiladores",
+        "period": 7,
+        "preRequisiteIds": ["FTC", "AC2"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "CG",
+        "name": "Computação Gráfica",
+        "period": 7,
+        "preRequisiteIds": ["AEDs2", "GAAL"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "F:AE",
+        "name": "Filosofia: Antropologia e Ética",
+        "period": 7,
+        "preRequisiteIds": [],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "R2",
+        "name": "Redes de Computadores II",
+        "period": 7,
+        "preRequisiteIds": ["R1"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "TC1",
+        "name": "Tópicos em Computação I",
+        "period": 7,
+        "preRequisiteIds": ["PAA"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "TC2",
+        "name": "Tópicos em Computação II",
+        "period": 7,
+        "preRequisiteIds": ["PAA"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "TC3",
+        "name": "Tópicos em Computação III",
+        "period": 7,
+        "preRequisiteIds": ["PAA"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "TCC1",
+        "name": "Trabalho de Conclusão de Curso I",
+        "period": 7,
+        "preRequisiteIds": ["PAA"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "CS",
+        "name": "Computadores e Sociedade",
+        "period": 8,
+        "preRequisiteIds": [],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "CR:PS",
+        "name": "Cultura Religiosa: Pessoa e Sociedade",
+        "period": 8,
+        "preRequisiteIds": [],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "O4",
+        "name": "Optativa IV",
+        "period": 8,
+        "preRequisiteIds": [],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "OS",
+        "name": "Otimização de Sistemas",
+        "period": 8,
+        "preRequisiteIds": ["TGC", "GAAL"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "SAS",
+        "name": "Segurança e Auditoria de Sistemas",
+        "period": 8,
+        "preRequisiteIds": ["ES2"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "TC4",
+        "name": "Tópicos em Computação IV",
+        "period": 8,
+        "preRequisiteIds": ["PAA"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "TC5",
+        "name": "Tópicos em Computação V",
+        "period": 8,
+        "preRequisiteIds": ["PAA"],
+        "coRequisiteIds": []
+    },
+    {
+        "id": "TCC2",
+        "name": "Trabalho de Conclusão de Curso II",
+        "period": 8,
+        "preRequisiteIds": ["TCC1"],
+        "coRequisiteIds": []
+    }
+]
