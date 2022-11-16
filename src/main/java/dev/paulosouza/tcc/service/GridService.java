@@ -69,10 +69,7 @@ public class GridService {
             // busca salas de aula do semestre atual
             List<Classroom> currentClassrooms = getCurrentSemesterClassrooms(classrooms, currentSubjects);
 
-            List<ClassroomResponse> classroomResponses = response.get(semester - request.getPeriod());
-            if (classroomResponses != null) {
-                classroomResponses.addAll(ClassroomMapper.INSTANCE.toResponse(currentClassrooms));
-            }
+            List<ClassroomResponse> classroomResponses = ClassroomMapper.INSTANCE.toResponse(currentClassrooms);
             response.put(semester - request.getPeriod(), classroomResponses);
 
             // remove as disciplinas que já foram alocadas
