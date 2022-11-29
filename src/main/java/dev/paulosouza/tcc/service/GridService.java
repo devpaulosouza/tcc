@@ -28,6 +28,7 @@ public class GridService {
         GridResponse response = new GridResponse();
 
         List<Subject> pendingSubjects = subjectRepository.findByPeriodGreaterThanEqualOrIdIn(request.getPeriod(), request.getPendingSubjectIds());
+        pendingSubjects = pendingSubjects.stream().filter(subject -> !request.getDoneSubjectIds().contains(subject.getId())).collect(Collectors.toList());
         List<String> pendingSubjectIds = pendingSubjects.stream().map(Subject::getId).collect(Collectors.toList());
 
         response.setPendingSubjects(pendingSubjectIds);
@@ -70,7 +71,9 @@ public class GridService {
             List<Classroom> currentClassrooms = getCurrentSemesterClassrooms(classrooms, currentSubjects);
 
             List<ClassroomResponse> classroomResponses = ClassroomMapper.INSTANCE.toResponse(currentClassrooms);
-            response.put(semester - request.getPeriod(), classroomResponses);
+
+            // adiciona as salas de aula no objeto de resposta
+            addClassroomsInResponse(request, response, semester, classroomResponses);
 
             // remove as disciplinas que já foram alocadas
             subjects.removeAll(currentSubjects);
@@ -81,6 +84,16 @@ public class GridService {
 
 
         return response;
+    }
+
+    private static void addClassroomsInResponse(GridRequest request, Map<Integer, List<ClassroomResponse>> response, int semester, List<ClassroomResponse> classroomResponses) {
+        if (response.get(semester - request.getPeriod()) != null) {
+            List<ClassroomResponse> currClassrooms = response.get(semester - request.getPeriod());
+            currClassrooms.addAll(classroomResponses);
+            response.put(semester - request.getPeriod(), currClassrooms);
+        } else {
+            response.put(semester - request.getPeriod(), classroomResponses);
+        }
     }
 
     private static List<Classroom> getCurrentSemesterClassrooms(Map<String, List<Classroom>> classroomMap, List<Subject> currentSemesterSubjects) {
